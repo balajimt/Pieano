@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html >
+<head>
+    <title>Πano</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/select.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+    
+<script src="js/main.js"></script>
+
+<body>
+    <br>
+    <div id="loader"></div>
+    <span id="help" onmousedown= toggle()>Toggle Keys</span>
+    <div id="logo">
+    <center><img src="images/logo.png"></center>
+    </div>
+    
+    <div id="audioFiles">
+        <audio preload="auto" id="c" src="audio/c.mp3"></audio>
+        <audio preload="auto" id="cs" src="audio/cis.mp3"></audio>
+        <audio preload="auto" id="d" src="audio/d.mp3"></audio>
+        <audio preload="auto" id="ds" src="audio/es.mp3"></audio>
+        <audio preload="auto" id="e" src="audio/e.mp3"></audio>
+        <audio preload="auto" id="f" src="audio/f.mp3"></audio>
+        <audio preload="auto" id="fs" src="audio/fis.mp3"></audio>
+        <audio preload="auto" id="g" src="audio/g.mp3"></audio>
+        <audio preload="auto" id="gs" src="audio/gis.mp3"></audio>
+        <audio preload="auto" id="a" src="audio/a.mp3"></audio>
+        <audio preload="auto" id="as" src="audio/b.mp3"></audio>
+        <audio preload="auto" id="b1" src="audio/h.mp3"></audio>
+        
+        <audio preload="auto" id="c2" src="audio/c1.mp3"></audio>
+        <audio preload="auto" id="cs2" src="audio/cis1.mp3"></audio>
+        <audio preload="auto" id="d2" src="audio/d1.mp3"></audio>
+        <audio preload="auto" id="ds2" src="audio/es1.mp3"></audio>
+        <audio preload="auto" id="e2" src="audio/e1.mp3"></audio>
+        <audio preload="auto" id="f2" src="audio/f1.mp3"></audio>
+        <audio preload="auto" id="fs2" src="audio/fis1.mp3"></audio>
+        <audio preload="auto" id="g2" src="audio/g1.mp3"></audio>
+        <audio preload="auto" id="gs2" src="audio/gis1.mp3"></audio>
+        <audio preload="auto" id="a2" src="audio/a1.mp3"></audio>
+        <audio preload="auto" id="as2" src="audio/b1.mp3"></audio>
+        <audio preload="auto" id="b2" src="audio/h1.mp3"></audio>
+        
+        <audio preload="auto" id="c3" src="audio/c2.mp3"></audio>
+    </div>
+    
+    <ul class="piano" id="piano">
+        <li onmousedown= playKey(0) id="white1 c1" class="white1 c1"> <div class='helpwhite switch'>A</div></li>
+        <li onmousedown= playKey(1) id="black1 cs" class="black1 cs"><div class='helpblack switch'>W</div></li>
+        <li onmousedown= playKey(2) id="white1 d" class="white1 d"><div class='helpwhite switch'>S</div></li>
+        <li onmousedown= playKey(3) id="black1 ds" class="black1 ds"><div class='helpblack switch'>E</div></li>
+        <li onmousedown= playKey(4) id="white1 e" class="white1 e"><div class='helpwhite switch'>D</div></li>
+        <li onmousedown= playKey(5) id="white1 f" class="white1 f"><div class='helpwhite switch'>F</div></li>
+        <li onmousedown= playKey(6) id="black1 fs" class="black1 fs"><div class='helpblack switch'>T</div></li>
+        <li onmousedown= playKey(7) id="white1 g" class="white1 g"><div class='helpwhite switch'>G</div></li>
+        <li onmousedown= playKey(8) id="black1 gs" class="black1 gs"><div class='helpblack switch'>Y</div></li>
+        <li onmousedown= playKey(9) id="white1 a" class="white1 a"><div class='helpwhite switch'>H</div></li>
+        <li onmousedown= playKey(10) id="black1 as" class="black1 as"><div class='helpblack switch'>U</div></li> 
+        <li onmousedown= playKey(11) id="white1 b1" class="white1 b1"><div class='helpwhite switch'>J</div></li>
+        
+        <li onmousedown= playKey(12) id="white2 c2" class="white2 c2"><div class='helpwhite2 switch'>K</div></li>
+        <li onmousedown= playKey(13) id="black2 cs" class="black2 cs"><div class='helpblack2 switch'>O</div></li>
+        <li onmousedown= playKey(14) id="white2 d" class="white2 d"><div class='helpwhite2 switch'>L</div></li>
+        <li onmousedown= playKey(15) id="black2 ds" class="black2 ds"><div class='helpblack2 switch'>P</div></li>
+        <li onmousedown= playKey(16) id="white2 e" class="white2 e"><div class='helpwhite2 switch'>;</div></li>
+        <li onmousedown= playKey(17) id="white2 f" class="white2 f"><div class='helpwhite2 switch'>'</div></li>
+        <li onmousedown= playKey(18) id="black2 fs" class="black2 fs"><div class='helpblack2 switch'>]</div></li> 
+        <li onmousedown= playKey(19) id="white2 g" class="white2 g"><div class='helpwhite2 enter switch'>enter</div></li> 
+        <li onmousedown= playKey(20) id="black2 gs" class="black2 gs"><div class='helpblack2 switch'>7</div></li>
+        <li onmousedown= playKey(21) id="white2 a" class="white2 a"><div class='helpwhite2 switch'>4</div></li>
+        <li onmousedown= playKey(22) id="black2 as" class="black2 as"><div class='helpblack2 switch'>8</div></li>
+        <li onmousedown= playKey(23) id="white2 b2" class="white2 b2"><div class='helpwhite2 switch'>5</div></li>
+        
+        <li onmousedown= playKey(24) id="white2 c3" class="white2 c3"><div class='helpwhite2 switch'>6</div></li>
+    </ul>
+    <script src='js/jquery.min.js'></script>
+    <script src='js/dropdown.js'></script>
+    
+    <div class="container">
+  <div class="dropdown">
+    <span class="selLabel">Play Me a Song</span>
+    <input type="hidden" name="cd-dropdown">
+    <ul class="dropdown-list">
+      <li onmousedown=playSong(hbd,400) data-value="1">
+        <span>Happy Birthday</span>
+      </li>
+      <li onmousedown=playSong(bombay,220) data-value="2">
+        <span>Bombay</span>
+      </li>
+      <li onmousedown=playSong(twinkle,400) data-value="3">
+        <span>Twinkle Twinkle</span>
+      </li>
+      <li onmousedown=playSong(ode,300) data-value="4">
+        <span>Ode to Joy</span>
+      </li>
+    </ul>
+  </div>
+</div>
+    
+    
+
+
+    
+    <div class="foot" id="footer">
+    <center>a balajimt production</center>
+    </div>
+    
+    
+    
+</body>
+</html>
